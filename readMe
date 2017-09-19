@@ -1,0 +1,22 @@
+To get pixlotto running:
+
+
+1. install MySQL and tomcat8
+
+2. import the pixlotto_2017-09-17.sql: (https://dev.mysql.com/doc/refman/5.7/en/creating-database.html)
+2.1 start mysql: mysql -u user -p password
+2.2 create pixlottoDB: mysql> CREATE DATABASE pixlottoDB; 
+2.3 switch to pixlottoDB: mysql> USE menagerie
+2.4 load the file: mysql> SOURCE [path to]/pixlotto_2017-09-17.sql
+
+3. copy the extracted archive (pixlotto folder) in the tomcat8  webapps folder. In my ubuntu linux it is: /var/lib/tomcat8/webapps
+
+4. start tomcat8: in Ubuntu run the script:  /etc/init.d/tomcat8 start 
+
+5. point the browser to localhost:8080/pixlotto/main
+
+6. hpefully you are done 
+
+
+
+

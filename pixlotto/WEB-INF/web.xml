@@ -1,0 +1,82 @@
+<!DOCTYPE web-app 
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" 
+    "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+
+<web-app>
+    <!-- General description of your web application -->
+
+    <display-name>PixLotto</display-name>
+    <description>Kick-ass lotto numbers generator</description>
+
+    <context-param>
+      <param-name>webmaster</param-name>
+      <param-value>myaddress@mycompany.com</param-value>
+      <description>
+        The EMAIL address of the administrator to whom questions
+        and comments about this application should be addressed.
+      </description>
+    </context-param>
+	<servlet>
+	      <servlet-name>Admin</servlet-name>
+	      <servlet-class>Admin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	        <servlet-name>Admin</servlet-name>
+	        <url-pattern>/admin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	      <servlet-name>AdminJSON</servlet-name>
+	      <servlet-class>AdminJSON</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	        <servlet-name>AdminJSON</servlet-name>
+	        <url-pattern>/adminJSON</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	      <servlet-name>PixLotto</servlet-name>
+	      <servlet-class>PixLotto</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	        <servlet-name>PixLotto</servlet-name>
+	        <url-pattern>/main</url-pattern>
+	</servlet-mapping>
+    <context-param> 
+        <param-name>dbConfig</param-name> 
+        <param-value>[username]:[password]:[db]</param-value> 
+    </context-param>
+	<context-param> 
+	    <description>Location to store uploaded file</description> 
+	    <param-name>file-upload</param-name> 
+	    <param-value>
+	        [path to]/webapps/pixlotto/data/
+	    </param-value> 
+	</context-param>
+	<context-param> 
+	    <description>Lotto configuration file</description> 
+	    <param-name>lottoConfig</param-name> 
+	    <param-value>
+	        [path to]/webapps/pixlotto/conf/lotto.csv
+	    </param-value> 
+	</context-param>
+	<context-param> 
+	    <description>tempPath</description> 
+	    <param-name>tempPath</param-name> 
+	    <param-value>
+	        [path to]/webapps/pixlotto/tmp/
+	    </param-value> 
+	</context-param>
+	<context-param> 
+	    <description>Default image</description> 
+	    <param-name>defaultImage</param-name> 
+	    <param-value>
+	        [path to]/webapps/pixlotto/styles/jumping.jpg
+	    </param-value> 
+	</context-param>
+	<context-param> 
+	    <description>Language configuration dir</description> 
+	    <param-name>langDir</param-name> 
+	    <param-value>
+	        [path to]/webapps/pixlotto/conf/
+	    </param-value> 
+	</context-param>
+</web-app>
