@@ -7,3 +7,5 @@ configuration can be found in: config.yml
 
 Start the server with the following command („cd pixlotto“ first!):
 java -jar bin/pixweb-1.0.0.jar server config.yml
+
+it runs on  http://localhost:5959
